@@ -18,7 +18,15 @@ function App() {
   return(
     <div>
     <Container>
-      <CustomNav></CustomNav>
+      <CustomNav
+        contactSelected={contactSelected}
+        setContactSelected={setContactSelected}
+        aboutSelected={aboutSelected}
+        setAboutSelected={setAboutSelected}
+        portfolioSelected={portfolioSelected}
+        setPortfolioSelected={setPortfolioSelected}
+        resumeSelected={resumeSelected}
+        setResumeSelected={setResumeSelected}></CustomNav>
     </Container>
       <main>
         <Container>

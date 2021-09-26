@@ -11,3 +11,63 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#Gopher-Img-Element {
+  background-image: url(./assets/images/96860-groundhog-day-cartoon-gopher-for-events-near-me.png);
+  background-position: top;
+  background-size: cover;
+}
+
+#GopherTwo-Img-Element {
+  background-image: url(./assets/images/96860-groundhog-day-cartoon-gopher-for-events-near-me.png);
+  background-position: top;
+  background-size: cover;
+}
+
+
+.card{
+  flex: 40%;
+  width: 40%;
+  margin: 10px;
+}
+
+main {
+  padding: 20px 0;
+}
+
+.img-class{
+  height: 50px;
+  width: 50px;
+}
+
+.portfolio-div{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.img-col{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+}
+
+#contact-section{
+  padding: 15px;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 5px;
+}
+
+.my-5{
+  padding: 15px;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 5px;
+}

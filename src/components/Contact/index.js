@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { validateEmail } from '../../utils/helpers';
+import {Form, Button} from "react-bootstrap";
 
 function ContactForm() {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
@@ -36,28 +37,32 @@ function ContactForm() {
   };
 
   return (
-    <section>
+    <section id="contact-section">
       <h1 data-testid="h1tag">Contact me</h1>
-      <form id="contact-form" onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Name:</label>
-          <input type="text" name="name" defaultValue={name} onBlur={handleChange} />
-        </div>
-        <div>
-          <label htmlFor="email">Email address:</label>
-          <input type="email" name="email" defaultValue={email} onBlur={handleChange} />
-        </div>
-        <div>
-          <label htmlFor="message">Message:</label>
-          <textarea name="message" rows="5" defaultValue={message} onBlur={handleChange} />
-        </div>
+      <Form id="contact-form" onSubmit={handleSubmit}>
+      <Form.Group className="mb-3">
+          <Form.Label htmlFor="name">Name:</Form.Label>
+          <Form.Control type="text" name="name" defaultValue={name} onBlur={handleChange} />
+          
+          </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label htmlFor="email">Email address:</Form.Label>
+          <Form.Control type="email" name="email" defaultValue={email} onBlur={handleChange} />
+          <Form.Text className="text-muted">
+          We'll never share your email with anyone else.
+          </Form.Text>
+        </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label htmlFor="message">Message:</Form.Label>
+          <Form.Control as="textarea" name="message" rows="5" defaultValue={message} onBlur={handleChange} />
+          </Form.Group>
         {errorMessage && (
           <div>
             <p className="error-text">{errorMessage}</p>
           </div>
         )}
-        <button data-testid="button" type="submit">Submit</button>
-      </form>
+        <Button variant="primary" data-testid="button" type="submit">Submit</Button>
+      </Form>
     </section>
   );
 }
