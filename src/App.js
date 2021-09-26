@@ -1,31 +1,61 @@
 import React, { useState } from 'react';
-import './App.css';
-import Nav from './components/Nav';
-import Content from './components/Content';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import CustomNav from './components/Nav';
+import Contact from './components/Contact';
+import About from './components/About';
+import Portfolio from './components/Portfolio';
+import Resume from './components/Resume';
 import Footer from './components/Footer'
 
-function App() {
-  const [categories] = useState([
-    {name: 'About', description: 'A short about me'},
-    {name: 'Portfolio', description: 'links to my past work'},
-    {name: 'Contact', description:'a contact me form'},
-    {name: 'Resume', description:'a link to download my resume'}
-  ]);
+import {Container} from "react-bootstrap";
 
-  const [currentCategory, setCurrentCategory] = useState(categories[0]);
+function App() {
+  const [contactSelected, setContactSelected] = useState(false);
+  const [aboutSelected, setAboutSelected] = useState(false);
+  const [portfolioSelected, setPortfolioSelected] = useState(true);
+  const [resumeSelected, setResumeSelected] = useState(false);
 
   return(
     <div>
-      <Nav
-        categories={categories}
-        setCurrentCategory={setCurrentCategory}
-        currentCategory={currentCategory}
-      ></Nav>
+    <Container>
+      <CustomNav></CustomNav>
+    </Container>
       <main>
-        <Content currentCategory={currentCategory}></Content>
+        <Container>
+        {contactSelected ? (
+          <>
+            <Contact></Contact>
+          </>
+        ) : (
+          <></>
+        )}
+        {aboutSelected ? (
+          <>
+            <About></About>
+          </>
+        ) : (
+          <></>
+        )}
+        {portfolioSelected ? (
+          <>
+            <Portfolio></Portfolio>
+          </>
+        ) : (
+          <></>
+        )}
+        {resumeSelected ? (
+          <>
+            <Resume></Resume>
+          </>
+        ) : (
+          <></>
+        )}
+        </Container>
       </main>
+      <Container>
       <Footer></Footer>
-    </div>
+      </Container>
+      </div>
   )
 }
 

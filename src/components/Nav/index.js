@@ -1,57 +1,35 @@
 import React from "react";
-import { capitalizeFirstLetter } from "../../utils/helpers";
+import {Navbar, Nav, Container, Row, Col} from "react-bootstrap";
 
-function Nav(props) {
-  const {
-    categories = [],
-    setCurrentCategory,
-    currentCategory,
-  } = props;
+function CustomNav(props){
 
-
-  const handleClick = (item) => {
-    return item;
-  };
+    const {
+        contactSelected,
+        setContactSelected,
+        aboutSelected,
+        setAboutSelected,
+        portfolioSelected,
+        setPortfolioSelected,
+        resumeSelected,
+        setResumeSelected
+    } = props;
 
   return (
-    <header className="flex-row px-1">
-      <h2>
-        <a data-testid="link" href="/">
-          <span role="img" aria-label="camera"> 📸</span> Oh Snap!
-        </a>
-      </h2>
-      <nav>
-        <ul className="flex-row">
-          <li className="mx-2">
-            <a data-testid="about" href="#about">
-              About me
-            </a>
-          </li>
-          <li className={"mx-2"}>
-            <span onClick={() => handleClick('Contact')}>
-              Contact
-            </span>
-          </li>
-          {categories.map((category) => (
-            <li
-              className={`mx-1 ${
-                currentCategory.name === category.name
-                }`}
-              key={category.name}
-            >
-              <span
-                onClick={() => {
-                  setCurrentCategory(category);
-                }}
-              >
-                {capitalizeFirstLetter(category.name)}
-              </span>
-            </li>
-          ))}
-        </ul>
-      </nav>
+    <header>
+      <Navbar>
+        <Container>
+          <Navbar.Brand href="/">Lukas Keel</Navbar.Brand>
+          <Navbar.Collapse>
+            <Nav className="me-auto">
+              <Nav.Link onClick={() => setContactSelected(true)}> Contact </Nav.Link>
+              <Nav.Link onClick={() => setAboutSelected(true)}> About Me </Nav.Link>
+              <Nav.Link onClick={() => setPortfolioSelected(true)}> Portfolio </Nav.Link>
+              <Nav.Link onClick={() => setResumeSelected(true)}> Resume </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </header>
-  );
-}
+  )}
 
-export default Nav;
+export default CustomNav;
