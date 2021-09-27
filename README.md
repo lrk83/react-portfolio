@@ -12,4 +12,9 @@ When you first load the portfolio you are presented with a navigation bar and an
 
 ## Screenshots
 
-![Deployed Application](https://github.com/lrk83/symmetrical-bassoon/blob/main/screenshots/Screen%20Shot%202021-09-16%20at%202.15.56%20PM.png)
+![About Me](https://github.com/lrk83/react-portfolio/blob/main/src/assets/screenshots/Screen%20Shot%202021-09-26%20at%209.58.51%20PM.png)
+![Contact Me](https://github.com/lrk83/react-portfolio/blob/main/src/assets/screenshots/Screen%20Shot%202021-09-26%20at%209.59.04%20PM.png)
+![Validation](https://github.com/lrk83/react-portfolio/blob/main/src/assets/screenshots/Screen%20Shot%202021-09-26%20at%209.59.11%20PM.png)
+![Email Validation](https://github.com/lrk83/react-portfolio/blob/main/src/assets/screenshots/Screen%20Shot%202021-09-26%20at%209.59.23%20PM.png)
+![Examples of my Work](https://github.com/lrk83/react-portfolio/blob/main/src/assets/screenshots/Screen%20Shot%202021-09-26%20at%209.59.32%20PM.png)
+![Resume](https://github.com/lrk83/react-portfolio/blob/main/src/assets/screenshots/Screen%20Shot%202021-09-26%20at%209.59.39%20PM.png)
