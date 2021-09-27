@@ -11,8 +11,8 @@ import {Container} from "react-bootstrap";
 
 function App() {
   const [contactSelected, setContactSelected] = useState(false);
-  const [aboutSelected, setAboutSelected] = useState(false);
-  const [portfolioSelected, setPortfolioSelected] = useState(true);
+  const [aboutSelected, setAboutSelected] = useState(true);
+  const [portfolioSelected, setPortfolioSelected] = useState(false);
   const [resumeSelected, setResumeSelected] = useState(false);
 
   return(

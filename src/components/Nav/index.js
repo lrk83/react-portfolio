@@ -1,5 +1,5 @@
 import React from "react";
-import {Navbar, Nav, Container, Row, Col} from "react-bootstrap";
+import {Navbar, Nav, Container} from "react-bootstrap";
 
 function CustomNav(props){
 
@@ -41,10 +41,34 @@ function CustomNav(props){
           <Navbar.Brand href="/">Lukas Keel</Navbar.Brand>
           <Navbar.Collapse>
             <Nav className="me-auto">
-              <Nav.Link onClick={() => handleClick(0)}> Contact </Nav.Link>
-              <Nav.Link onClick={() => handleClick(1)}> About Me </Nav.Link>
-              <Nav.Link onClick={() => handleClick(2)}> Portfolio </Nav.Link>
-              <Nav.Link onClick={() => handleClick(3)}> Resume </Nav.Link>
+              {contactSelected ? (
+                <>
+                <Nav.Link id="nav-selected">Contact</Nav.Link>
+                </>
+              ) : (
+                <><Nav.Link onClick={() => handleClick(0)}> Contact </Nav.Link></>
+              )}
+              {aboutSelected ? (
+                <>
+                <Nav.Link id="nav-selected">About Me</Nav.Link>
+                </>
+              ) : (
+                <><Nav.Link onClick={() => handleClick(1)}> About Me </Nav.Link></>
+              )}
+              {portfolioSelected ? (
+                <>
+                <Nav.Link id="nav-selected">Portfolio</Nav.Link>
+                </>
+              ) : (
+                <><Nav.Link onClick={() => handleClick(2)}> Portfolio </Nav.Link></>
+              )}
+              {resumeSelected ? (
+                <>
+                <Nav.Link id="nav-selected">Resume</Nav.Link>
+                </>
+              ) : (
+                <><Nav.Link onClick={() => handleClick(3)}> Resume </Nav.Link></>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>
