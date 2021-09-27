@@ -28,11 +28,11 @@ function Portfolio(){
             description: "JS, HTML, CSS, Server Side APIs",
             link: 'https://lrk83.github.io/Weather-Dashboard/'
         },
-        {
-            name: "Run Buddy",
-            id: "RunBuddy-Img-Element",
-            description: "HTML, CSS",
-            link:"https://lrk83.github.io/run-buddy/"
+        {   
+            name: "Workday Scheduler",
+            id: "WorkDay-Img-Element",
+            description: "HTRML, Bootstrap, JQuery",
+            link: "https://lrk83.github.io/Work-Day-Scheduler/"
         },
         {
             name: "Code Quiz",
@@ -40,22 +40,22 @@ function Portfolio(){
             description: "HTML, Bootstrap, JS",
             link: "https://lrk83.github.io/Code-Quiz/"
         },
-        {   
-            name: "Workday Scheduler",
-            id: "WorkDay-Img-Element",
-            description: "HTRML, Bootstrap, JQuery",
-            link: "https://lrk83.github.io/Work-Day-Scheduler/"
-        }
+        {
+            name: "Run Buddy",
+            id: "RunBuddy-Img-Element",
+            description: "HTML, CSS",
+            link:"https://lrk83.github.io/run-buddy/"
+        },
     ])
 
     return(
         <div className="portfolio-div">
             {work.map((example, i)=>(
-                <Card key={example.name} id={example.id}>
+                <Card key={example.name} id={example.id} className="WorkCard">
                     <Col className="img-col">
                         <div className="img-class" ></div>
                     </Col>
-                    <Card.Body >
+                    <Card.Body>
                         <Col>
                             <Card.Text>
                                 {example.description}
